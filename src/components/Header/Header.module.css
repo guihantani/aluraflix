@@ -1,0 +1,25 @@
+.header{
+    width: 96%;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-shadow: 0 5px 29px 0 rgba(34, 113, 209, 0.7);
+    border-bottom: solid 4px #2271d1;
+    background-color: #262626;
+}
+
+.header img{
+    width: 168.5px;
+    height: 40px;
+    flex-grow: 0;
+    object-fit: contain;
+}
+
+.header div{
+    display: flex;
+}
