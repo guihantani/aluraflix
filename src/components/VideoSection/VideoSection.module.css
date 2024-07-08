@@ -1,0 +1,12 @@
+.videoSection{
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.videoContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(432px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}

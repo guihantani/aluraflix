@@ -1,6 +1,6 @@
 import styles from './Header.module.css'
 import Button from '../Button'
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Header(){
     const currentLocation = useLocation();
@@ -18,7 +18,9 @@ function Header(){
 
     return(
         <header className={styles.header} style={{backgroundColor: `${headerColor}`}}>
-            <img src='/images/aluralogo.png'/>
+            <Link to={'/'}>
+                <img src='/images/aluralogo.png'/>
+            </Link>
             <div>
                 {activeButton === 'home' ? 
                     <Button isNavigation isActive targetPage={'/'}>HOME</Button> : <Button isNavigation targetPage={'/'}>HOME</Button>
