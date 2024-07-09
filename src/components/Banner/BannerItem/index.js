@@ -1,7 +1,7 @@
 import Tag from '../../Tag'
 import styles from './BannerItem.module.css'
 
-function BannerItem({category, imgLink, title, description}){
+function BannerItem({category, imgLink, videoLink, title, description}){
     return(
         <section className={styles.bannerItem} style={{backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${imgLink})`}}>
             <div className={styles.container}>
@@ -12,7 +12,7 @@ function BannerItem({category, imgLink, title, description}){
                         <p>{description}</p>
                     </div>
                 </div>
-                <img src={imgLink} alt={title}/>
+                <a href={videoLink}><img className={styles.image} src={imgLink} alt={title}/></a>
             </div>
         </section>
     )

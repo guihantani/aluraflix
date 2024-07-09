@@ -43,3 +43,22 @@
     transform: translateY(-2px);
 }
 
+.modal{
+  position: fixed;
+  top:calc(50% - 200px);
+  left:calc(50% - 250px);
+  width:500px;
+  height:400px;
+  z-index: 999999;
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+

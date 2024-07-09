@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './Button.module.css'
 
-function Button({isNavigation = false, targetPage, children, isActive = false}){
+function Button({isNavigation = false, targetPage, children, isActive = false, borderColor = '#f5f5f5', type = null}){
     if(isNavigation && isActive){
         return(
             <Link to={targetPage}>
@@ -18,6 +18,17 @@ function Button({isNavigation = false, targetPage, children, isActive = false}){
                     {children}
                 </button>
             </Link>
+        )
+    }
+
+    if(!isNavigation){
+        return(
+            <button 
+                type={type}
+                className={styles.button} 
+                style={{color: '#fff', border: `solid 2px ${borderColor}`, boxShadow: 'none', backgroundColor: 'transparent'}}>
+                {children}
+            </button> 
         )
     }
 }
