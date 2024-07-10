@@ -1,24 +1,23 @@
+import { useContext } from 'react'
 import styles from './Tag.module.css'
+import { VideoContext } from '../../context/VideoContext';
 
-function Tag({category, width, height, fontSize}){
-    let tagColor = ''
-    let tagText = ''
+function Tag({category, width, height, fontSize = '29px'}){
 
-    if(category === 'Front End'){
-        tagColor = '#6bd1ff'
-        tagText = 'FRONT END'
-    }
-    else if(category === 'Back End'){
-        tagColor = '#00c86f'
-        tagText = 'BACK END'
-    }
-    else if(category === 'Mobile'){
-        tagColor = '#ffba05'
-        tagText = 'MOBILE'
+    const {categorys} = useContext(VideoContext);
+
+    const result = categorys.filter(function(s){
+        return s.name === category;
+    });
+    
+    if(result.length){
+        return(
+            <div className={styles.tag} style={{backgroundColor: `${result[0].tagColor}`, width:`${width}`, height:`${height}`, fontSize:`${fontSize}`, lineHeight:`${height}`}}>{result[0].tagText}</div>
+        )
     }
 
     return(
-        <div className={styles.tag} style={{backgroundColor: `${tagColor}`, width:`${width}`, height:`${height}`, fontSize:`${fontSize}`, lineHeight:`${height}`}}>{tagText}</div>
+        <></>
     )
 }
 

@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import ReactModal from 'react-modal';
 import EditModal from '../../EditModal';
 
-function VideoCard({category, imgLink, description}){
+function VideoCard({video}){
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
     function openModal() {
@@ -17,19 +17,22 @@ function VideoCard({category, imgLink, description}){
 
     return(
         <div className={styles.videoCard}>
-            <img src={imgLink} alt={description} />
+            <a href={video.url}>
+                <img src={video.image} alt={video.title} />
+            </a>
             <div className={styles.bar}>
-                <button class="btn" ><i class="fa fa-trash fa-2x"></i> DELETAR</button>
-                <button class="btn" onClick={openModal}><i class="fa fa-pencil-square-o fa-2x"></i> EDITAR</button>
-                <ReactModal
+                <button className="btn" ><i className="fa fa-trash fa-2x"></i> DELETAR</button>
+                <button className="btn" onClick={openModal}><i className="fa fa-pencil-square-o fa-2x"></i> EDITAR</button>
+                <Modal
                     isOpen={modalIsOpen}
                     onRequestClose={closeModal}
-                    contentLabel="Modal de exemplo"
+                    ariaHideApp={false}
+                    contentLabel="Modal de Edição"
                     className={styles.modal}
                     overlayClassName={styles.overlay}
                 >
                     <EditModal closeModalFunction={closeModal}/>
-                </ReactModal>
+                </Modal>
             </div>
         </div>
     )

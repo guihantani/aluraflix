@@ -1,15 +1,19 @@
+import { useContext } from 'react'
 import Tag from '../Tag'
 import VideoCard from './VideoCard'
 import styles from './VideoSection.module.css'
+import { VideoContext } from '../../context/VideoContext'
 
-function VideoSection(){
+function VideoSection({category}){
+    const {videos} = useContext(VideoContext)
+
+    const filteredVideos = videos.filter(function(video){return video.category === category.name})
+
     return(
         <section className={styles.videoSection}>
-            <Tag category={'Front End'} width='432px' height='70px' fontSize='32px'/>
+            <Tag category={category.name} width='432px' height='70px' fontSize='32px'/>
             <div className={styles.videoContainer}>
-                <VideoCard className={styles.video} category='Front End' imgLink='https://img.youtube.com/vi/lwBnRXBMOpE/0.jpg' description='Testo teste asdiasdjqaiwdjidjiawjdwajidawjidjkawidjiawdjiaw'/>
-                <VideoCard className={styles.video} category='Front End' imgLink='https://img.youtube.com/vi/lwBnRXBMOpE/0.jpg' description='Testo teste asdiasdjqaiwdjidjiawjdwajidawjidjkawidjiawdjiaw'/>
-                <VideoCard className={styles.video} category='Front End' imgLink='https://img.youtube.com/vi/lwBnRXBMOpE/0.jpg' description='Testo teste asdiasdjqaiwdjidjiawjdwajidawjidjkawidjiawdjiaw'/>
+                {filteredVideos.map((video) => <VideoCard key={video.id} className={styles.video} video={video}/>)}
             </div>
         </section>
     )

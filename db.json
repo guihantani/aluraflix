@@ -1,0 +1,96 @@
+{
+  "categorys": [
+    {
+      "id": 1,
+      "name": "frontend",
+      "tagText": "FRONT END",
+      "tagColor": "#6bd1ff"
+    },
+    {
+      "id": 2,
+      "name": "backend",
+      "tagText": "BACK END",
+      "tagColor": "#00c86f"
+    },
+    {
+      "id": 3,
+      "name": "inovacao_gestao",
+      "tagText": "INOVAÇÃO E GESTÃO",
+      "tagColor": "#ffba05"
+    }
+  ],
+  "videos": [
+    {
+      "id": "1",
+      "title": "Conhecendo a linguagem Go | Hipsters.Talks",
+      "category": "frontend",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod convallis nisl non lacinia. Ut at libero aliquet, vehicula lectus ac, sodales augue. Nunc et enim viverra, eleifend nulla in, eleifend turpis. Nam luctus, dolor nec consequat faucibus, orci metus finibus ligula, a tempus arcu diam non ante. Nulla rutrum placerat lorem sed convallis. Praesent tincidunt luctus nunc, a auctor dui consectetur at. Nullam in congue purus. Aliquam eget nibh non urna lacinia consequat id quis dolor.",
+      "url": "https://www.youtube.com/embed/y8FeZMv37WU",
+      "image": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": "2",
+      "title": "Desmistificando mobile - Linguagens e Frameworks",
+      "category": "frontend",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod convallis nisl non lacinia. Ut at libero aliquet, vehicula lectus ac, sodales augue. Nunc et enim viverra, eleifend nulla in, eleifend turpis. Nam luctus, dolor nec consequat faucibus, orci metus finibus ligula, a tempus arcu diam non ante. Nulla rutrum placerat lorem sed convallis. Praesent tincidunt luctus nunc, a auctor dui consectetur at. Nullam in congue purus. Aliquam eget nibh non urna lacinia consequat id quis dolor.",
+      "url": "https://www.youtube.com/embed/fmu1LQvZhms",
+      "image": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": "3",
+      "title": "Orientação a objetos com Roberta Arcoverde | #Hipster...",
+      "category": "frontend",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod convallis nisl non lacinia. Ut at libero aliquet, vehicula lectus ac, sodales augue. Nunc et enim viverra, eleifend nulla in, eleifend turpis. Nam luctus, dolor nec consequat faucibus, orci metus finibus ligula, a tempus arcu diam non ante. Nulla rutrum placerat lorem sed convallis. Praesent tincidunt luctus nunc, a auctor dui consectetur at. Nullam in congue purus. Aliquam eget nibh non urna lacinia consequat id quis dolor.",
+      "url": "https://www.youtube.com/embed/jpuJ1qrluoU",
+      "image": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": "4",
+      "title": "Linguagens e ferramentas usadas em Ciência de Dados...",
+      "category": "backend",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod convallis nisl non lacinia. Ut at libero aliquet, vehicula lectus ac, sodales augue. Nunc et enim viverra, eleifend nulla in, eleifend turpis. Nam luctus, dolor nec consequat faucibus, orci metus finibus ligula, a tempus arcu diam non ante. Nulla rutrum placerat lorem sed convallis. Praesent tincidunt luctus nunc, a auctor dui consectetur at. Nullam in congue purus. Aliquam eget nibh non urna lacinia consequat id quis dolor.",
+      "url": "https://www.youtube.com/embed/h83e1aAM5xQ",
+      "image": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": "5",
+      "title": "Reencontrando a paixão por programar: Beatriz Ramerindo",
+      "category": "backend",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod convallis nisl non lacinia. Ut at libero aliquet, vehicula lectus ac, sodales augue. Nunc et enim viverra, eleifend nulla in, eleifend turpis. Nam luctus, dolor nec consequat faucibus, orci metus finibus ligula, a tempus arcu diam non ante. Nulla rutrum placerat lorem sed convallis. Praesent tincidunt luctus nunc, a auctor dui consectetur at. Nullam in congue purus. Aliquam eget nibh non urna lacinia consequat id quis dolor.",
+      "url": "https://www.youtube.com/embed/CnB3eLTrkn4",
+      "image": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": "6",
+      "title": "Híbridos: Flutter e React Native | Desmistificando..",
+      "category": "backend",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod convallis nisl non lacinia. Ut at libero aliquet, vehicula lectus ac, sodales augue. Nunc et enim viverra, eleifend nulla in, eleifend turpis. Nam luctus, dolor nec consequat faucibus, orci metus finibus ligula, a tempus arcu diam non ante. Nulla rutrum placerat lorem sed convallis. Praesent tincidunt luctus nunc, a auctor dui consectetur at. Nullam in congue purus. Aliquam eget nibh non urna lacinia consequat id quis dolor.",
+      "url": "https://www.youtube.com/embed/vf9P_PycgRw",
+      "image": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": "7",
+      "title": "Data Science na prática- com Jéssika Ribeiro do Grupo...",
+      "category": "inovacao_gestao",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod convallis nisl non lacinia. Ut at libero aliquet, vehicula lectus ac, sodales augue. Nunc et enim viverra, eleifend nulla in, eleifend turpis. Nam luctus, dolor nec consequat faucibus, orci metus finibus ligula, a tempus arcu diam non ante. Nulla rutrum placerat lorem sed convallis. Praesent tincidunt luctus nunc, a auctor dui consectetur at. Nullam in congue purus. Aliquam eget nibh non urna lacinia consequat id quis dolor.",
+      "url": "https://www.youtube.com/embed/Nts3P35mHzE",
+      "image": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": "8",
+      "title": "baNaNa | Memes do JavaScript #2",
+      "category": "inovacao_gestao",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod convallis nisl non lacinia. Ut at libero aliquet, vehicula lectus ac, sodales augue. Nunc et enim viverra, eleifend nulla in, eleifend turpis. Nam luctus, dolor nec consequat faucibus, orci metus finibus ligula, a tempus arcu diam non ante. Nulla rutrum placerat lorem sed convallis. Praesent tincidunt luctus nunc, a auctor dui consectetur at. Nullam in congue purus. Aliquam eget nibh non urna lacinia consequat id quis dolor.",
+      "url": "https://www.youtube.com/embed/HBVCsBtsmzA",
+      "image": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": "9",
+      "title": "[Casa do Código] Live de lançamento: Navegando no Universo da Programação",
+      "category": "inovacao_gestao",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod convallis nisl non lacinia. Ut at libero aliquet, vehicula lectus ac, sodales augue. Nunc et enim viverra, eleifend nulla in, eleifend turpis. Nam luctus, dolor nec consequat faucibus, orci metus finibus ligula, a tempus arcu diam non ante. Nulla rutrum placerat lorem sed convallis. Praesent tincidunt luctus nunc, a auctor dui consectetur at. Nullam in congue purus. Aliquam eget nibh non urna lacinia consequat id quis dolor.",
+      "url": "https://www.youtube.com/embed/z43rcfjXOxU",
+      "image": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg"
+    }
+  ]
+}

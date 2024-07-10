@@ -17,6 +17,7 @@
 .container{
     flex-grow: 1;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding-bottom: 8%;
 }
@@ -32,6 +33,7 @@
     font-size: 46px;
     font-weight: normal;
     margin: 0;
+    line-break: auto;
 }
 
 .text p{
@@ -44,4 +46,5 @@
     object-fit: cover;
     width: 646px;
     height: 333.6px;
+    justify-self: center;
 }

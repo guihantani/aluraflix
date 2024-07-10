@@ -94,6 +94,11 @@
     font-size: 20px; 
 }
 
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
 textarea::-webkit-scrollbar {
     width: 4px;
 }
