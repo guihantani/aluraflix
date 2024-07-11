@@ -53,6 +53,18 @@
     gap: 10px;
 }
 
+.titulo{
+    width: 40%;
+}
+
+.categoria{
+    width: 50%;
+}
+
+.image_link{
+    width: 48.5%;
+}
+
 .input label{
     font-size: 20px;
     font-weight: 600;
@@ -113,4 +125,60 @@ textarea::-webkit-scrollbar-track {
   
 textarea::-webkit-scrollbar-thumb {
     background: var(--cinza); 
+}
+
+@media only screen and (max-width: 1222px) {
+    .image_link {
+        width: 48%;
+    }
+    
+}
+
+@media only screen and (max-width: 572px) {
+    .form {
+        width: 82vw;
+        height: 1250px;
+    }
+
+    .container{
+        gap: 50px
+    }
+
+    .text h1{
+        font-size: 38px;
+    }
+    
+    .text p{
+        font-size: 13px;
+    }
+
+    .inputContainer{
+        flex-direction: column;
+        width: 97%;
+    }
+
+    .titulo{
+        width: 100%;
+    }
+    
+    .categoria{
+        width: 100%;
+    }
+    
+    .image_link{
+        width: 100%;
+    }
+
+    .input input{
+        width: 98%;
+    }
+
+    .input select{
+        width: 101%;
+    }
+    
+
+    .input textarea{
+        width: 95%;
+    }
 }

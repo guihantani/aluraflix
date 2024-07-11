@@ -4,38 +4,8 @@ import axios from 'axios';
 export const VideoContext = createContext();
 
 export const VideoProvider = ({children}) => {
-    const [error, setError] = useState();
     const [videos, setVideos] = useState([]);
     const [categorys, setCategorys] = useState([]);
-
-    /*useEffect(() => {
-        const fetchVideos = async() =>{
-            try{
-                const response = await fetch('http://localhost:8000/videos');
-                const videos = (await response.json());
-                setVideos(videos);
-            } catch(e){
-                setError(e);
-            }
-
-        };
-
-        fetchVideos();
-    }, []);
-
-    useEffect(() => {
-        const fetchCategorys = async() =>{
-            try{
-                const response = await fetch('http://localhost:8000/categorys');
-                const categorys = (await response.json());
-                setCategorys(categorys);
-            } catch(e){
-                setError(e);
-            }
-        };
-
-        fetchCategorys();
-    }, []);}*/
 
     useEffect(() =>{
         axios.get('http://localhost:8000/videos')
@@ -52,7 +22,7 @@ export const VideoProvider = ({children}) => {
     },[])
 
     return(
-        <VideoContext.Provider value={{videos, categorys, error}}>
+        <VideoContext.Provider value={{videos, setVideos, categorys}}>
             {children}
         </VideoContext.Provider>
     )
@@ -73,11 +43,41 @@ export function useVideoContext(){
             })
             .then((response)=>{
                 setVideos([...videos, response.data])
+                alert("Vídeo adicionado com sucesso!")
+                window.location.reload();
             })
-            .catch(() => alert("Vídeo Adicionado com Sucesso"))
+            .catch(() => alert("Falha ao adicionar o vídeo, tente novamente mais tarde"))
+    }
+
+    function deleteVideo(video){        
+        axios
+            .delete(`http://localhost:8000/videos/${video.id}`)
+            .then(() =>{
+                setVideos(videos.filter((currentVideo) => currentVideo.id !== video.id))
+            })
+            .catch(() => alert("Falha ao deletar o vídeo, tente novamente mais tarde"))
+    }
+
+    function editVideo(video){
+        axios
+            .put(`http://localhost:8000/videos/${video.id}`,{
+                "id":video.id,
+                "title":video.title,
+                "category":video.category,
+                "description":video.description,
+                "url": video.url,
+                "image": video.image
+            })
+            .then(()=>{
+                setVideos(videos.map(thisVideo => thisVideo.id === video.id ? video : thisVideo))
+                alert("Vídeo editado com sucesso!")
+            })
+            .catch(() => alert("Falha ao editar o vídeo, tente novamente mais tarde"))
     }
 
     return{
         addVideo,
+        deleteVideo,
+        editVideo,
     }
 }

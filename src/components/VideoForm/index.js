@@ -14,6 +14,7 @@ function VideoForm(){
     const {addVideo} = useVideoContext();
 
     const submitForm = (evento) => {
+        evento.preventDefault()
         const newVideo = {
             "id":uuidv4(),
             "title":title,
@@ -22,8 +23,6 @@ function VideoForm(){
             "url": url,
             "image": image
         }
-
-        console.log(newVideo)
 
         addVideo(newVideo);
     }
@@ -37,17 +36,16 @@ function VideoForm(){
             <form id='new-video-form' onSubmit={submitForm} className={styles.form}>
                 <h2>Criar Card</h2>
                 <div className={styles.inputContainer}>
-                    <div className={styles.input} style={{width:'40%'}}>
+                    <div className={`${styles.input} ${styles.titulo}`} >
                         <label htmlFor='titulo'>Título</label>
                         <input type='text' id='titulo' name='titulo' placeholder='Digite o Título do vídeo' onChange={((event) => {
                             setTitle(event.target.value)
                         })} required/>   
                     </div>
-                    <div className={styles.input} style={{width:'50%'}}>
+                    <div className={`${styles.input} ${styles.categoria}`}>
                         <label htmlFor='categoria'>Categoria</label>
                         <select id="categoria" name="categoria" required onChange={((event) => {
                             setCategory(event.target.value)
-                            console.log(category)
                         })}>
                             <option value="" hidden>Selecione uma categoria</option>
                             <option value="frontend">Front End</option>
@@ -57,20 +55,20 @@ function VideoForm(){
                     </div>
                 </div>
                 <div className={styles.inputContainer}>
-                    <div className={styles.input} style={{width:'48.5%'}}>
+                    <div className={`${styles.input} ${styles.image_link}`}>
                         <label htmlFor='imagem'>Imagem</label>
                         <input type='text' id='imagem' name='imagem' placeholder='Digite o Link da imagem do vídeo' onChange={((event) => {
                             setImage(event.target.value)
                         })} required/>
                     </div>
-                    <div className={styles.input} style={{width:'48.5%'}}> 
+                    <div className={`${styles.input} ${styles.image_link}`}> 
                         <label htmlFor='link'>Vídeo</label>
                         <input type='text' id='link' name='link' placeholder='Digite o Link do Vídeo' onChange={((event) => {
                             setUrl(event.target.value)
                         })} required/>
                     </div>
                 </div>
-                <div className={styles.input} style={{width:'48.5%'}}>
+                <div className={`${styles.input} ${styles.image_link}`}>
                     <label htmlFor='descricao'>Descrição</label>
                     <textarea type='text' rows='10' id='descricao' name='descricao' placeholder='Sobre o que é esse vídeo?' onChange={((event) => {
                             setDescription(event.target.value)

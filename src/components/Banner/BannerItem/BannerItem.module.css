@@ -1,7 +1,7 @@
 .bannerItem{
     flex-grow: 1;
     display: flex;
-    align-items: end;
+    align-items: center;
     margin: 0;
     border-radius: 20px;
     max-width: 100%;
@@ -47,4 +47,35 @@
     width: 646px;
     height: 333.6px;
     justify-self: center;
+}
+
+@media only screen and (max-width: 1222px) {
+    .text h1{
+        font-size: 36px;
+    }
+
+    .text p{
+        font-size: 15px;
+    }
+
+    .image{
+        width: 452.5px;
+        height: 333.6px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .text h1{
+        font-size: 28px;
+    }
+
+    .text p{
+        font-size: 14px;
+    }
+
+    .image{
+        width: 420.5px;
+        height: 333.6px;
+    }
+    
 }
